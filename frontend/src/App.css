@@ -30,3 +30,8 @@
     transform: rotate(360deg);
   }
 }
+
+.progressbar-container {
+  width: 100px;
+  height: 10px;
+}
