@@ -2,7 +2,6 @@ import React from 'react';
 
 export const CogwheelIcon = () => {
   return <svg
-      className="icon"
       viewBox="0 0 24 24"
     >
     <path
