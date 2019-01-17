@@ -1,7 +1,10 @@
 import './App.css';
 import React from 'react';
 import { RechargeableBattery } from './components/rechargeable-battery';
-import { StarIcon } from './components/star-icon';
+import { CropFreeIcon } from './components/crop-free-icon';
+import { HelpCircleOutlineIcon } from './components/help-circle-outline-icon';
+import { CogwheelIcon } from './components/cogwheel-icon';
+import { PowerIcon } from './components/power-icon';
 
 const temp1 = {
   position: "absolute",
@@ -28,7 +31,18 @@ const App = () => {
           <div style={temp1}><RechargeableBattery progress={100} /></div>
           <div style={temp2}><RechargeableBattery progress={70} /></div>
           <div style={temp3}><RechargeableBattery progress={0} /></div>
-          <StarIcon />
+          <div className="icon-container crop-free">
+            <CropFreeIcon />
+          </div>
+          <div className="icon-container help-circle-outline">
+            <HelpCircleOutlineIcon />
+          </div>
+          <div className="icon-container cogwheel">
+            <CogwheelIcon />
+          </div>
+          <div className="icon-container power">
+            <PowerIcon />
+          </div>
           <p>
             The UI is coming soon.
           </p>

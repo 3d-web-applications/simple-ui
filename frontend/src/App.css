@@ -61,3 +61,30 @@
   height: 24px;
   fill: #666;
 }
+
+.icon-container {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  fill: #666;
+}
+
+.crop-free {
+  bottom: 0px;
+  right: 0px;
+}
+
+.help-circle-outline {
+  top: 0px;
+  right: 0px;
+}
+
+.cogwheel {
+  top: 0px;
+  right: 24px;
+}
+
+.power {
+  bottom: 0px;
+  left: 0px;
+}
