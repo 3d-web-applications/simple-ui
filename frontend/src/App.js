@@ -5,6 +5,7 @@ import { CropFreeIcon } from './components/crop-free-icon';
 import { HelpCircleOutlineIcon } from './components/help-circle-outline-icon';
 import { CogwheelIcon } from './components/cogwheel-icon';
 import { PowerIcon } from './components/power-icon';
+import { RefillablePower } from './components/refillable-power';
 
 const temp1 = {
   position: "absolute",
@@ -24,6 +25,12 @@ const temp3 = {
   left: "24px",
 };
 
+const temp4 = {
+  color: "#f00",
+  "-webkit-clip-path": "inset(10px 0px 0px 0px)",
+  "clip-path": "inset(10px 0px 0px 0px)",
+}
+
 const App = () => {
     return (
       <div className="App">
@@ -40,9 +47,13 @@ const App = () => {
           <div className="icon-container cogwheel">
             <CogwheelIcon />
           </div>
-          <div className="icon-container power">
+          {/* <div className="icon-container power">
             <PowerIcon />
           </div>
+          <div className="icon-container power" >
+            <PowerIcon style={temp4}/>
+          </div> */}
+          <RefillablePower />
           <p>
             The UI is coming soon.
           </p>
