@@ -1,0 +1,30 @@
+.cogwheel-icon {
+  fill: #607d8b;
+}
+
+.cogwheel-icon:active {
+  fill: #fff;
+}
+
+.lightbulb-icon.disabled {
+  fill: #000;
+}
+
+.lightbulb-icon.enabled {
+  fill: #ffc107;
+}
+
+.security-icon.disabled {
+  fill: #000;
+}
+
+.security-icon.enabled {
+  fill: #673ab7;
+}
+.plus-box-icon.disabled {
+  fill: #000;
+}
+
+.plus-box-icon.enabled {
+  fill: #4caf50;
+}

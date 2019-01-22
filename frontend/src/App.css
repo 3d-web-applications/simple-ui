@@ -10,7 +10,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -33,7 +32,7 @@
   }
 }
 
-.battery {
+/*.battery {
   position: absolute;
   width: 24px;
   height: 24px;
@@ -53,7 +52,7 @@
   left: 4px;
   width: 14px;
   height: 10px;
-}
+}*/
 
 .icon {
   position: absolute;
@@ -68,9 +67,141 @@
   height: 48px;
 }
 
+.radio-button-blank {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+}
+
+.rb-1 {
+  left: 110px;
+  bottom: 90px;
+}
+
+.rb-2 {
+  left: 120px;
+  bottom: 60px;
+}
+
+.rb-3 {
+  left: 110px;
+  bottom: 30px;
+}
+
+.m1 {
+  left: 120px;
+  bottom: 73px;
+}
+
+.m2 {
+  left: 130px;
+  bottom: 43px;
+}
+
+.m3 {
+  left: 120px;
+  bottom: 13px;
+}
+
+.info {
+  position: absolute;
+  font-size: 12px;
+}
+
+.info1 {
+  bottom: 93px;
+  left: 160px;
+}
+
+.info2 {
+  bottom: 63px;
+  left: 160px;
+}
+
+.info3 {
+  bottom: 33px;
+  left: 160px;
+}
+
+.info4 {
+  width: 128px;
+  bottom: 30px;
+  text-align: center;
+}
+
+.info5 {
+  width: 128px;
+  bottom: 30px;
+  text-align: center;
+}
+
+.info6 {
+  width: 128px;
+  bottom: 30px;
+  text-align: center;
+}
+
+.info7 {
+  width: 128px;
+  bottom: 30px;
+  text-align: center;
+}
+
+.memory {
+  position: absolute;
+  width: 128px;
+  height: 128px;
+}
+
 .crop-free {
-  bottom: 0px;
-  right: 0px;
+  width: 128px;
+  height: 128px;
+}
+
+.box1 {
+  position: absolute;
+  top: -95px;
+}
+
+.box2 {
+  position: absolute;
+  top: 0px;
+  right: -95px;
+}
+
+.box3 {
+  position: absolute;
+  top: 95px;
+}
+
+.box4 {
+  position: absolute;
+  top: 0px;
+  right: 95px;
+}
+
+.box5 {
+  position: absolute;
+  top: 0px;
+  right: 95px;
+}
+
+.box6 {
+  position: absolute;
+  top: 100px;
+  right: 95px;
+}
+
+.box7 {
+  position: absolute;
+  top: 200px;
+  right: 95px;
+}
+
+.box8 {
+  position: absolute;
+  top: 300px;
+  right: 95px;
 }
 
 .help-circle-outline {
@@ -92,8 +223,36 @@
 
 .power-icon-background {
   fill: #000;
+  /*stroke: #fff;
+  stroke-width: 0.2px;
+  stroke-opacity: 1;
+  fill-opacity: 0.1;*/
 }
 
 .power-icon-foreground {
-  fill: #f00;
+  fill: #f44336;
+}
+
+.battery {
+  width: 108px;
+  height: 108px;
+  bottom: 13px;
+  right: 0px;
+}
+
+.battery-icon-background {
+  fill: #000;
+  /*stroke: #fff;
+  stroke-width: 0.2px;
+  stroke-opacity: 1;
+  fill-opacity: 0.1;*/
+}
+
+.battery-icon-foreground {
+  fill: #2196f3;
+}
+
+.svg {
+  width: inherit;
+  height: inherit;
 }
