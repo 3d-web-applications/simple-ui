@@ -1,0 +1,36 @@
+.input-screen {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+.row {
+  height: 33.3vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.column {
+  width: inherit;
+  height: inherit;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.keyboard-icon {
+
+}
+
+.mouse-icon {
+
+}
+
+.controller-icon {
+
+}
+
+.cellphone-icon {
+
+}

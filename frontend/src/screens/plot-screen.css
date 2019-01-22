@@ -1,0 +1,19 @@
+.plot-screen {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: #282c34;
+}
+
+.plot {
+  width: 70vw;
+  height: 100vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skip {
+  position: absolute;
+  right: 40px;
+  top: 0px;
+}

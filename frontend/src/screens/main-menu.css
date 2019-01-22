@@ -1,0 +1,99 @@
+.main-menu {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(30, 30, 30);
+}
+
+.center {
+  position: absolute;
+  width: 400px;
+  height: 100vw;
+  top: 0px;
+  left: 0px;
+  margin-top: 20vh;
+  z-index: 2;
+}
+
+.main-menu-btn {
+  width: 50%;
+  height: 80px;
+  line-height: 80px;
+  border: 1px solid #fff;
+  text-align: left;
+  margin: 20px 0px 0px 0px;
+  font-size: 32px;
+  background-color: #333333;
+  padding-left: 10px;
+
+  -webkit-transition: width 0.5s ease-in-out;
+  -moz-transition: width 0.5s ease-in-out;
+  -o-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
+}
+
+.main-menu-btn:active {
+  background-color: #333333dd;
+}
+
+.main-menu-btn:hover {
+  -webkit-transition: width 0.5s ease-in-out;
+  -moz-transition: width 0.5s ease-in-out;
+  -o-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
+
+  width:100%;
+}
+
+.main-menu-btn.disabled {
+  display: block;
+  pointer-events: none;
+  border: 1px solid #888;
+  background-color: #333333;
+  color: #888;
+}
+
+.main-menu-typing-box {
+  width: 150px;
+  line-height: 0;
+  font-size: 12px;
+
+}
+
+.main-menu-typing-box p {
+  line-height: 2px;
+  font-size: 8px;
+}
+/*
+.main-menu-typing {
+  position: absolute;
+  top: 10px;
+  left: 100px;
+}
+
+.main-menu-typing2 {
+  position: absolute;
+  top: 70px;
+  right: 30px;
+}
+
+.main-menu-typing3 {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+
+.main-menu-typing p {
+  line-height: 2px;
+  font-size: 8px;
+}
+
+.main-menu-typing2 p {
+  line-height: 2px;
+  font-size: 8px;
+}
+
+.main-menu-typing3 p {
+  line-height: 2px;
+  font-size: 8px;
+}*/

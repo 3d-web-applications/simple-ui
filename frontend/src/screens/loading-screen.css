@@ -1,0 +1,31 @@
+.LS {
+  width: 100vw;
+  height: 100vh;
+  background-color: #282c34;
+}
+
+.LS-typing-area {
+  position: absolute;
+  margin: 0vw 25vw;
+  bottom: 10em;
+  min-width: 50vw;
+  border-bottom: 1px solid #999;
+  border-top: 1px solid #999;
+}
+
+.LS-title {
+  position: absolute;
+  bottom: 3em;
+  left: 3em;
+  z-index: 1;
+  line-height: 10px;
+}
+
+.progressbar-progress {
+  background-color: #fff !important;
+  height: 5px !important;
+}
+
+h1 .normal {
+  font-weight: normal;
+}

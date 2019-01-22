@@ -1,0 +1,53 @@
+.row-100 {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.welcome-screen {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(30, 30, 30);
+}
+
+.cover-image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.title {
+  position: absolute;
+  bottom: 3em;
+  left: 3em;
+  z-index: 1;
+  line-height: 10px;
+}
+
+h1 {
+  color: #fff;
+}
+
+p {
+  color: #999;
+  font-size: 24px;
+}
+
+.pulsate {
+    -webkit-animation: pulsate 3s ease-out;
+    -webkit-animation-iteration-count: infinite; 
+    opacity: 1.0;
+}
+@-webkit-keyframes pulsate {
+    0% { 
+        opacity: 0.2;
+    }
+    50% { 
+        opacity: 1.0;
+    }
+    100% { 
+        opacity: 0.2;
+    }
+}
