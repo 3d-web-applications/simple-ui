@@ -8,6 +8,7 @@ import { RefillablePower } from '../components/refillable-power';
 import { RadioButtonBlank } from '../components-svg/radio-button-blank-icon';
 import { MinusIcon } from '../components-svg/minus-icon';
 import { AbilityContainer } from '../components/ability-container';
+import { OverlayScreen } from './overlay-screen';
 
 const IngameUi = () => {
     const [options, setOptions] = useState(false);
@@ -46,15 +47,7 @@ const IngameUi = () => {
           <RechargeableBattery progress={progress} />
           <AbilityContainer />
 
-          {options && <div className="ingame-screen-overlay">
-            <div>
-              <div>Resume to Game</div>
-              <div>Save game</div>
-              <div>Load game</div>
-              <div>Options</div>
-              <div>Back to Main</div>
-            </div>
-          </div>}
+          {options && <OverlayScreen />}
       </div>
     );
 }
