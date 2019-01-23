@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { RechargeableBattery } from '../components/rechargeable-battery2';
 import { CogwheelIcon } from '../components-svg/cogwheel-icon';
@@ -8,6 +8,9 @@ import { MinusIcon } from '../components-svg/minus-icon';
 import { AbilityContainer } from '../components/ability-container';
 
 const IngameUi = () => {
+    const [options, setOptions] = useState(false);
+    const progress = 50;
+
     return (
         <div className="ingame-ui">
 
@@ -31,15 +34,17 @@ const IngameUi = () => {
           </div>
 
           <div className="icon-container cogwheel">
-            <CogwheelIcon />
+            <CogwheelIcon onClick={() => setOptions(true)} />
           </div>
 
           <RefillablePower />
           <div className="info info1">Schock Absorption: normal</div>
           <div className="info info2">System Cooling: normal</div>
           <div className="info info3">Operating System: normal</div>
-          <RechargeableBattery />
+          <RechargeableBattery progress={progress} />
           <AbilityContainer />
+
+          {options && <div className="options">options</div>}
       </div>
     );
 }

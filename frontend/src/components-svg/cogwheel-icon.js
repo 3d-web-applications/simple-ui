@@ -1,7 +1,7 @@
 import React from 'react';
 
-export const CogwheelIcon = () => {
-  return <svg
+export const CogwheelIcon = ({onClick}) => {
+  return <svg onClick={onClick}
       viewBox="0 0 24 24"
     >
     <path className={'cogwheel-icon active'}
