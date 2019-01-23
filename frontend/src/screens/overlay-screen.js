@@ -3,7 +3,7 @@ import './overlay-screen.css';
 import React from 'react';
 
 export const OverlayScreen = () => {
-  return <div className="ingame-screen-overlay">
+  return <div className="overlay-screen">
     <div>
       <div>Resume to Game</div>
       <div>Save game</div>
