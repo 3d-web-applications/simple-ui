@@ -10,7 +10,7 @@ import { MinusIcon } from '../components-svg/minus-icon';
 import { AbilityContainer } from '../components/ability-container';
 import { OverlayScreen } from './overlay-screen';
 
-const IngameUi = () => {
+export const IngameUi = () => {
     const [options, setOptions] = useState(false);
     const progress = 50;
 
@@ -51,5 +51,3 @@ const IngameUi = () => {
       </div>
     );
 }
-
-export { IngameUi };
