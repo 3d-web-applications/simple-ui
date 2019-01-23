@@ -39,7 +39,7 @@ const App = () => {
       case 2: return <PlotScreen plot={plot} onClick={enterMainMenu} />;
       case 3: return <MainMenuScreen startNewGame={enterLoadingScreen} />;
       case 4: return <LoadingScreen onClick={enterNewGame} />;
-      case 5: return <IngameUi />;
+      case 5: return <IngameUi backToMain={enterMainMenu}/>;
       default: return null;
     }
   };
