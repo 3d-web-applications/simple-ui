@@ -22,3 +22,7 @@
 .overlay-screen-button:hover {
   background-color: #ff000099;
 }
+
+.overlay-screen-button:active {
+  background-color: #ff0000dd;
+}
