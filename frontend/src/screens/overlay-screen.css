@@ -17,6 +17,7 @@
   margin: 10px 0;
   background-color: #00000099;
   padding: 10px 15px 0;
+  pointer-events: all;
 }
 
 .inactive {
@@ -33,7 +34,7 @@
   background-color: #ff0000dd;
 }
 
-.unselectable {
+.unselectable-text {
   -webkit-user-select: none; /* Safari */        
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+/Edge */
