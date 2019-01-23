@@ -3,7 +3,7 @@ import './overlay-screen.css';
 import React from 'react';
 
 export const OverlayScreen = () => {
-  return <div className="overlay-screen">
+  return <div className="overlay-screen unselectable">
     <div className="overlay-screen-button-group">
       <div
         className="overlay-screen-button"
