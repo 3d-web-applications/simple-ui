@@ -2,12 +2,9 @@ import './overlay-screen.css';
 
 import React from 'react';
 
-import { hideContentMenu } from '../util/hide-context-menu';
-
 export const OverlayScreen = ({closeOverlay, backToMain}) => {
   return <div
       className="overlay-screen unselectable-text"
-      onContextMenu={hideContentMenu}
     >
     <div className="overlay-screen-button-group">
       <div

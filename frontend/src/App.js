@@ -11,6 +11,7 @@ import { PlotScreen } from './screens/plot-screen';
 import { MainMenuScreen } from './screens/main-menu-screen';
 import { LoadingScreen } from './screens/loading-screen';
 import { IngameUi } from './screens/ingame-screen';
+import { hideContentMenu } from './util/hide-context-menu';
 
 import plot from './data/plot';
 
@@ -45,7 +46,7 @@ const App = () => {
   };
 
   return (
-    <div className="App">
+    <div className="App" onContextMenu={hideContentMenu}>
       <header className="App-header">
         {SelectMenu(pageIndex)}
       </header>
