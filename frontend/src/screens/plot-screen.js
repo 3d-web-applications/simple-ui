@@ -7,7 +7,7 @@ const PlotScreen = ({plot, onClick}) => {
   const array = [];
 
   plot.forEach((text) => {
-    array.push(<div>
+    array.push(<div key={array.length}>
         <p>{text}</p>
         <Typing.Delay ms={1000} />
       </div>
