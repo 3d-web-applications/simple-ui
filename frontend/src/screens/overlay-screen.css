@@ -4,5 +4,21 @@
   height: 100vh;
   top: 0;
   left: 0;
-  background-color: #000000aa;
+  background-color: #000000cc;
+}
+
+.overlay-screen-button-group {
+  width: 240px;
+  margin: 25vw auto;
+}
+
+.overlay-screen-button {
+  height: 50px;
+  margin: 10px 0;
+  background-color: #00000099;
+  padding: 10px 15px 0;
+}
+
+.overlay-screen-button:hover {
+  background-color: #ff000099;
 }
