@@ -19,6 +19,12 @@
   padding: 10px 15px 0;
 }
 
+.inactive {
+  color: #999;
+  background-color: #66666699;
+  pointer-events: none;
+}
+
 .overlay-screen-button:hover {
   background-color: #ff000099;
 }

@@ -12,19 +12,19 @@ export const OverlayScreen = ({closeOverlay, backToMain}) => {
         Resume to Game
       </div>
       <div
-        className="overlay-screen-button"
+        className="overlay-screen-button inactive"
         onClick={() => {}}
       >
         Save game
       </div>
       <div
-        className="overlay-screen-button"
+        className="overlay-screen-button inactive"
         onClick={() => {}}
       >
         Load game
       </div>
       <div
-        className="overlay-screen-button"
+        className="overlay-screen-button inactive"
         onClick={() => {}}
       >
         Options
