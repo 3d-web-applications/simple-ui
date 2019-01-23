@@ -1,3 +1,5 @@
+import './ingame-screen.css';
+
 import React, { useState } from 'react';
 
 import { RechargeableBattery } from '../components/rechargeable-battery2';
@@ -44,7 +46,7 @@ const IngameUi = () => {
           <RechargeableBattery progress={progress} />
           <AbilityContainer />
 
-          {options && <div className="options">options</div>}
+          {options && <div className="ingame-screen-overlay"></div>}
       </div>
     );
 }
