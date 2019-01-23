@@ -15,7 +15,7 @@ const WelcomeScreen = ({onClick}) => {
       </div>
       <div className="column">
         <img
-          className="cover-image"
+          className="cover-image undraggable-image"
           src={url.default}
           alt="The main character is looking into the air and cannot believe that he was left behind"
         />

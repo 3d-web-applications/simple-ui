@@ -46,7 +46,7 @@ const App = () => {
   };
 
   return (
-    <div className="App" onContextMenu={hideContentMenu}>
+    <div className="App unselectable-text" onContextMenu={hideContentMenu}>
       <header className="App-header">
         {SelectMenu(pageIndex)}
       </header>
