@@ -10,7 +10,7 @@ import { WelcomeScreen } from './screens/welcome-screen';
 import { PlotScreen } from './screens/plot-screen';
 import { MainMenuScreen } from './screens/main-menu-screen';
 import { LoadingScreen } from './screens/loading-screen';
-import { IngameUi } from './components/ingame-ui';
+import { IngameUi } from './screens/ingame-ui';
 
 import plot from './data/plot';
 

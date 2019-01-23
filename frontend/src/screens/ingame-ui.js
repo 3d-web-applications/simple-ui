@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { RechargeableBattery } from './rechargeable-battery2';
+import { RechargeableBattery } from '../components/rechargeable-battery2';
 import { CogwheelIcon } from '../components-svg/cogwheel-icon';
-import { RefillablePower } from './refillable-power';
+import { RefillablePower } from '../components/refillable-power';
 import { RadioButtonBlank } from '../components-svg/radio-button-blank-icon';
 import { MinusIcon } from '../components-svg/minus-icon';
-import { AbilityContainer } from './ability-container';
+import { AbilityContainer } from '../components/ability-container';
 
 const IngameUi = () => {
     return (
