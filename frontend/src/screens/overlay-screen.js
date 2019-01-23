@@ -2,12 +2,12 @@ import './overlay-screen.css';
 
 import React from 'react';
 
-export const OverlayScreen = () => {
+export const OverlayScreen = ({closeOverlay, backToMain}) => {
   return <div className="overlay-screen unselectable">
     <div className="overlay-screen-button-group">
       <div
         className="overlay-screen-button"
-        onClick={() => {}}
+        onClick={closeOverlay}
       >
         Resume to Game
       </div>
@@ -31,7 +31,7 @@ export const OverlayScreen = () => {
       </div>
       <div
         className="overlay-screen-button"
-        onClick={() => {}}
+        onClick={backToMain}
       >
         Back to Main
       </div>

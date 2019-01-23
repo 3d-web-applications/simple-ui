@@ -10,7 +10,7 @@ import { MinusIcon } from '../components-svg/minus-icon';
 import { AbilityContainer } from '../components/ability-container';
 import { OverlayScreen } from './overlay-screen';
 
-export const IngameUi = () => {
+export const IngameUi = ({backToMain}) => {
     const [options, setOptions] = useState(false);
     const progress = 50;
 
@@ -47,7 +47,10 @@ export const IngameUi = () => {
           <RechargeableBattery progress={progress} />
           <AbilityContainer />
 
-          {options && <OverlayScreen />}
+          {options && <OverlayScreen
+            closeOverlay={() => setOptions(false)}
+            backToMain={backToMain}
+          />}
       </div>
     );
 }
