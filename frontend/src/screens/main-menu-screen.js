@@ -10,7 +10,7 @@ const MainMenuScreen = ({startNewGame, resumeLastGame, enterOptionsMenu}) => {
   return <div className="main-menu">
   <div className="column">
         <img
-          className="cover-image undraggable-image"
+          className="cover-image non-draggable-image"
           src={url.default}
           alt="The main character is looking into the air and cannot believe that he was left behind"
         />

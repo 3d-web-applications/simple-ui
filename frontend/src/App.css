@@ -39,7 +39,7 @@
   user-select: none; /* Standard */
 }
 
-.undraggable-image { 
+.non-draggable-image { 
   user-select: none;
   -moz-user-select: none;
   -webkit-user-drag: none;
