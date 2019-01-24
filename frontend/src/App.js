@@ -13,10 +13,11 @@ import { LoadingScreen } from './screens/loading-screen';
 import { IngameUi } from './screens/ingame-screen';
 import { hideContentMenu } from './util/hide-context-menu';
 
+import debug from './data/debug-settings';
 import plot from './data/plot';
 
 const App = () => {
-  const [pageIndex, setPageIndex] = useState(1);
+  const [pageIndex, setPageIndex] = useState(debug.entryPoint || 1);
 
   const enterPrologue = () => {
     setPageIndex(2);
