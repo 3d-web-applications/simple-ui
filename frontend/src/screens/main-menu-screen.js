@@ -3,51 +3,46 @@ import './main-menu.css';
 import React from 'react'; 
 import PropTypes from 'prop-types';
 
+import { ButtonGroup } from '../components/button-group';
 import { closeApplication } from '../util/close-application';
 import * as url from '../images/background-image - Kopie4.png';
 
 const MainMenuScreen = (
   { startNewGame, resumeLastGame, enterOptionsMenu, vocabulary }
 ) => {
-  const loadButtonClass = `main-menu-btn ${(localStorage) ? '' : 'disabled'}`;
+  const buttons = [
+    {
+      label: vocabulary.main_btn_new,
+      classes: 'main-menu-btn',
+      onClick: startNewGame,
+    },
+    {
+      label: vocabulary.main_btn_load,
+      classes: `main-menu-btn ${(localStorage) ? '' : 'disabled'}`,
+      onClick: resumeLastGame,
+    },
+    {
+      label: vocabulary.main_btn_options,
+      classes: 'main-menu-btn disabled',
+      onClick: enterOptionsMenu,
+    },
+    {
+      label: vocabulary.main_btn_quit,
+      classes: 'main-menu-btn',
+      onClick: closeApplication,
+    }
+  ];
+
   return <div className="main-menu">
-  <div className="column">
-        <img
-          className="cover-image non-draggable-image"
-          src={url.default}
-          alt={vocabulary.main_img_alt}
-        />
-      </div>
+    <div className="column">
+      <img
+        className="cover-image non-draggable-image"
+        src={url.default}
+        alt={vocabulary.main_img_alt}
+      />
+    </div>
     <div className="center">
-
-      <div
-        className="main-menu-btn"
-        onClick={() => startNewGame()}
-      >
-      {vocabulary.main_btn_new}
-      </div>
-
-      <div
-        className={loadButtonClass}
-        onClick={() => resumeLastGame()}
-      >
-      {vocabulary.main_btn_load}
-      </div>
-
-      <div
-        className="main-menu-btn disabled"
-        onClick={() => enterOptionsMenu()}
-      >
-      {vocabulary.main_btn_options}
-      </div>
-
-      <div
-        className="main-menu-btn"
-        onClick={() => closeApplication()}
-      >
-      {vocabulary.main_btn_quit}
-      </div>
-
+      <ButtonGroup buttons={buttons} />
     </div>
   </div>
 };
