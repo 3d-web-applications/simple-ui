@@ -3,7 +3,7 @@ import './plot-screen.css';
 import React from 'react';
 import Typing from 'react-typing-animation';
 
-const PlotScreen = ({plot, onClick}) => {
+const PlotScreen = ({ plot, onClick, vocabulary }) => {
   const array = [];
 
   plot.forEach((text) => {
@@ -18,7 +18,7 @@ const PlotScreen = ({plot, onClick}) => {
       className="plot-screen"
       onClick={() => onClick()
     }>
-      <p className="skip pulsate">Press any key to skip intro...</p>
+      <p className="skip pulsate">{vocabulary.intro_skip}</p>
       <div className="plot">
         <Typing speed={30}>
           {array}

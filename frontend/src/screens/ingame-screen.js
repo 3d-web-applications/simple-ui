@@ -10,7 +10,7 @@ import { MinusIcon } from '../components-svg/minus-icon';
 import { AbilityContainer } from '../components/ability-container';
 import { OverlayScreen } from './overlay-screen';
 
-export const IngameUi = ({backToMain}) => {
+export const IngameUi = ({ backToMain, vocabulary }) => {
     const [options, setOptions] = useState(false);
     const progress = 50;
 
@@ -50,6 +50,7 @@ export const IngameUi = ({backToMain}) => {
           {options && <OverlayScreen
             closeOverlay={() => setOptions(false)}
             backToMain={backToMain}
+            vocabulary={vocabulary}
           />}
       </div>
     );

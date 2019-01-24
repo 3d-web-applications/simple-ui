@@ -1,0 +1,17 @@
+{
+  "welcome_title": "Left Behind",
+  "welcome_skip": "Press any key to continue...",
+  "welcome_img_alt": "The main character is looking into the air and cannot believe that he was left behind",
+  "intro_skip": "Press any key to skip intro...",
+  "main_img_alt": "The main character is looking into the air and cannot believe that he was left behind",
+  "main_btn_new": "New Game",
+  "main_btn_load": "Load Game",
+  "main_btn_options": "Options",
+  "main_btn_quit": "Quit",
+  "load_continue": "Press any key to continue",
+  "options_btn_resume": "Resume to Game",
+  "options_btn_save": "Save Game",
+  "options_btn_load": "Load Game",
+  "options_btn_options": "Options",
+  "options_btn_back": "Back to Main"
+}

@@ -4,20 +4,20 @@ import React from 'react';
 
 import * as url from '../images/background-image - Kopie4.png';
 
-const WelcomeScreen = ({onClick}) => {
+const WelcomeScreen = ({ onClick, vocabulary }) => {
   return <div className="welcome-screen">
     <div className="row-100" onClick={() => onClick()}>
       <div className="column">
         <div className="title">
-          <h1>Left Behind</h1>
-          <p className="pulsate">Press any key to continue...</p>
+          <h1>{vocabulary.welcome_title}</h1>
+          <p className="pulsate">{vocabulary.welcome_skip}</p>
         </div>
       </div>
       <div className="column">
         <img
           className="cover-image non-draggable-image"
           src={url.default}
-          alt="The main character is looking into the air and cannot believe that he was left behind"
+          alt={vocabulary.welcome_img_alt}
         />
       </div>
     </div>

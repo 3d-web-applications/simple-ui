@@ -15,6 +15,7 @@ import { hideContentMenu } from './util/hide-context-menu';
 
 import debug from './data/debug-settings';
 import plot from './data/plot';
+import vocabulary from './data/en';
 
 const App = () => {
   const [pageIndex, setPageIndex] = useState(debug.entryPoint || 1);
@@ -37,11 +38,11 @@ const App = () => {
 
   const SelectMenu = (value) => {
     switch (value) {
-      case 1: return <WelcomeScreen onClick={enterPrologue} />;
-      case 2: return <PlotScreen plot={plot} onClick={enterMainMenu} />;
-      case 3: return <MainMenuScreen startNewGame={enterLoadingScreen} />;
-      case 4: return <LoadingScreen onClick={enterNewGame} />;
-      case 5: return <IngameUi backToMain={enterMainMenu}/>;
+      case 1: return <WelcomeScreen onClick={enterPrologue} vocabulary={vocabulary} />;
+      case 2: return <PlotScreen plot={plot} onClick={enterMainMenu} vocabulary={vocabulary} />;
+      case 3: return <MainMenuScreen startNewGame={enterLoadingScreen} vocabulary={vocabulary} />;
+      case 4: return <LoadingScreen onClick={enterNewGame} vocabulary={vocabulary} />;
+      case 5: return <IngameUi backToMain={enterMainMenu} vocabulary={vocabulary} />;
       default: return null;
     }
   };

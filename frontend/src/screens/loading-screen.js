@@ -39,7 +39,7 @@ const createTypingField = (style) => {
   </div>
 };
 
-const LoadingScreen = ({onClick}) => {
+const LoadingScreen = ({ onClick, vocabulary }) => {
   return <div className="LS" onClick={() => onClick()}>
     <div className="LS-typing-area">
       {createTypingField(style)}
@@ -54,8 +54,7 @@ const LoadingScreen = ({onClick}) => {
         <div className="progress-container">
           <Progress completed={100} />
         </div>
-        <p className="pulsate">
-          Press any key to continue...
+        <p className="pulsate">{vocabulary.load_continue}
         </p>
       </div>
   </div>
