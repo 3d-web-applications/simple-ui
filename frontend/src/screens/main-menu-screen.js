@@ -28,7 +28,7 @@ const MainMenuScreen = ({startNewGame, resumeLastGame, enterOptionsMenu}) => {
         className="main-menu-btn disabled"
         onClick={() => resumeLastGame()}
       >
-      Resume
+      Load Game
       </div>
 
       <div
