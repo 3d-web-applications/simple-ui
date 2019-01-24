@@ -1,9 +1,10 @@
 import './overlay-screen.css';
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export const OverlayScreen = ({ closeOverlay, backToMain, vocabulary }) => {
-  return <div
+export const OverlayScreen = ({ closeOverlay, backToMain, vocabulary }) => (
+  <div
       className="overlay-screen unselectable-text"
     >
     <div className="overlay-screen-button-group">
@@ -38,5 +39,11 @@ export const OverlayScreen = ({ closeOverlay, backToMain, vocabulary }) => {
         {vocabulary.options_btn_back}
       </div>
     </div>
-  </div>;
+  </div>
+);
+
+OverlayScreen.propTypes = {
+  closeOverlay: PropTypes.func.isRequired,
+  backToMain: PropTypes.func.isRequired,
+  vocabulary: PropTypes.object.isRequired,
 };

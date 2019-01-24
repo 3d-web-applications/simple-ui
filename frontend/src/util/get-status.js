@@ -1,3 +1,1 @@
-export const getStatus = (enabled) => {
-  return (enabled) ? 'enabled' : 'disabled';
-};
+export const getStatus = enabled => (enabled ? 'enabled' : 'disabled');

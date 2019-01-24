@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { KeyboardIcon }from '../components-svg/keyboard-icon';
+import { KeyboardIcon } from '../components-svg/keyboard-icon';
 import { MouseIcon } from '../components-svg/mouse-icon';
 import { ControllerIcon } from '../components-svg/controller-icon';
 import { CellphoneIcon } from '../components-svg/cellphone-icon';
 
-const InputScreen = () => {
-  return <div className="input-screen">
+const InputScreen = () => (
+  <div className="input-screen">
     <div className="row">
       <div className="column">
       <KeyboardIcon customClass="keyboard-icon" />
@@ -24,6 +24,6 @@ const InputScreen = () => {
       </div>
     </div>
   </div>
-};
+);
 
 export { InputScreen };

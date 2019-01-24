@@ -1,6 +1,7 @@
 import './plot-screen.css';
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import Typing from 'react-typing-animation';
 
 const PlotScreen = ({ plot, onClick, vocabulary }) => {
@@ -10,8 +11,7 @@ const PlotScreen = ({ plot, onClick, vocabulary }) => {
     array.push(<div key={array.length}>
         <p>{text}</p>
         <Typing.Delay ms={1000} />
-      </div>
-    );
+      </div>);
   });
 
   return <div
@@ -24,8 +24,13 @@ const PlotScreen = ({ plot, onClick, vocabulary }) => {
           {array}
         </Typing>
       </div>
-     
-    </div>
+    </div>;
+};
+
+PlotScreen.propTypes = {
+  plot: PropTypes.array.isRequired,
+  onClick: PropTypes.func.isRequired,
+  vocabulary: PropTypes.object.isRequired,
 };
 
 export { PlotScreen };

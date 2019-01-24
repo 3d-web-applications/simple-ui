@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Progress from 'react-progressbar';
 
-import { BatteryIcon } from './battery-icon';
+import { BatteryIcon } from '../components-svg/battery-icon';
 
-export const RechargeableBattery = ({progress}) => {
-  return <div
+export const RechargeableBattery = ({ progress }) => (
+  <div
     className="battery">
     <Progress
       className="battery-progress"
@@ -13,7 +13,7 @@ export const RechargeableBattery = ({progress}) => {
     />
     <BatteryIcon />
   </div>
-};
+);
 
 RechargeableBattery.propTypes = {
   progress: PropTypes.number.isRequired,

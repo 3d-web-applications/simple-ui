@@ -1,15 +1,15 @@
 import './main-menu.css';
 
-import React from 'react'; 
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import { ButtonGroup } from '../components/button-group';
 import { closeApplication } from '../util/close-application';
 import * as url from '../images/background-image - Kopie4.png';
 
-const MainMenuScreen = (
-  { startNewGame, resumeLastGame, enterOptionsMenu, vocabulary }
-) => {
+const MainMenuScreen = ({
+  startNewGame, resumeLastGame, enterOptionsMenu, vocabulary,
+}) => {
   const buttons = [
     {
       label: vocabulary.main_btn_new,
@@ -30,7 +30,7 @@ const MainMenuScreen = (
       label: vocabulary.main_btn_quit,
       classes: 'main-menu-btn',
       onClick: closeApplication,
-    }
+    },
   ];
 
   return <div className="main-menu">
@@ -44,19 +44,20 @@ const MainMenuScreen = (
     <div className="center">
       <ButtonGroup buttons={buttons} />
     </div>
-  </div>
+  </div>;
 };
 
 MainMenuScreen.defaultProps = {
   startNewGame: () => {},
   resumeLastGame: () => {},
   enterOptionsMenu: () => {},
-}
+};
 
 MainMenuScreen.propTypes = {
   startNewGame: PropTypes.func.isRequired,
   resumeLastGame: PropTypes.func.isRequired,
   enterOptionsMenu: PropTypes.func.isRequired,
+  vocabulary: PropTypes.object.isRequired,
 };
 
 export { MainMenuScreen };

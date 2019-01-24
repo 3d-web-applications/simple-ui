@@ -1,11 +1,12 @@
 import './welcome-screen.css';
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import * as url from '../images/background-image - Kopie4.png';
 
-const WelcomeScreen = ({ onClick, vocabulary }) => {
-  return <div className="welcome-screen">
+const WelcomeScreen = ({ onClick, vocabulary }) => (
+  <div className="welcome-screen">
     <div className="row-100" onClick={() => onClick()}>
       <div className="column">
         <div className="title">
@@ -22,6 +23,12 @@ const WelcomeScreen = ({ onClick, vocabulary }) => {
       </div>
     </div>
   </div>
+);
+
+WelcomeScreen.propTypes = {
+  onClick: PropTypes.func.isRequired,
+  vocabulary: PropTypes.object.isRequired,
 };
+
 
 export { WelcomeScreen };

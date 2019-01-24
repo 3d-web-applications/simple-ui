@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export const BatteryIcon = ({classnames, style}) => {
-  return <svg style={style}
+export const BatteryIcon = ({ classnames, style }) => (
+  <svg style={style}
       viewBox="0 0 24 24"
     >
     <path className={classnames}
@@ -9,4 +10,9 @@ export const BatteryIcon = ({classnames, style}) => {
       d="M16.67,4H15V2H9V4H7.33A1.33,1.33 0 0,0 6,5.33V20.67C6,21.4 6.6,22 7.33,22H16.67A1.33,1.33 0 0,0 18,20.67V5.33C18,4.6 17.4,4 16.67,4Z"
     />
   </svg>
+);
+
+BatteryIcon.propTypes = {
+  classnames: PropTypes.string.isRequired,
+  style: PropTypes.object,
 };
