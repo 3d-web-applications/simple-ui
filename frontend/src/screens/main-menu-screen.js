@@ -23,7 +23,7 @@ const MainMenuScreen = ({
     },
     {
       label: vocabulary.main_btn_options,
-      classes: 'main-menu-btn disabled',
+      classes: 'main-menu-btn',
       onClick: enterOptionsMenu,
     },
     {
