@@ -16,38 +16,39 @@ import { OptionsMenu } from './screens/options-menu';
 import debug from './data/debug-settings';
 import plot from './data/plot';
 import vocabulary from './data/en';
+import screen from './data/screen-index';
 
 const App = () => {
-  const [pageIndex, setPageIndex] = useState(debug.entryPoint || 1);
+  const [pageIndex, setPageIndex] = useState(debug.entryPoint || screen.welcome);
 
   const enterPrologue = () => {
-    setPageIndex(2);
+    setPageIndex(screen.intro);
   };
 
   const enterMainMenu = () => {
-    setPageIndex(3);
+    setPageIndex(screen.main);
   };
 
   const enterLoadingScreen = () => {
-    setPageIndex(4);
+    setPageIndex(screen.load);
   };
 
   const enterNewGame = () => {
-    setPageIndex(5);
+    setPageIndex(screen.ingame);
   };
 
   const enterOptionsMenu = () => {
-    setPageIndex(6);
+    setPageIndex(screen.option);
   };
 
   const SelectMenu = (value) => {
     switch (value) {
-      case 1: return <WelcomeScreen onClick={enterPrologue} vocabulary={vocabulary} />;
-      case 2: return <PlotScreen plot={plot} onClick={enterMainMenu} vocabulary={vocabulary} />;
-      case 3: return <MainMenuScreen startNewGame={enterLoadingScreen} enterOptionsMenu={enterOptionsMenu} vocabulary={vocabulary} />;
-      case 4: return <LoadingScreen onClick={enterNewGame} vocabulary={vocabulary} />;
-      case 5: return <IngameUi backToMain={enterMainMenu} vocabulary={vocabulary} />;
-      case 6: return <OptionsMenu />;
+      case screen.welcome: return <WelcomeScreen onClick={enterPrologue} vocabulary={vocabulary} />;
+      case screen.intro: return <PlotScreen plot={plot} onClick={enterMainMenu} vocabulary={vocabulary} />;
+      case screen.main: return <MainMenuScreen startNewGame={enterLoadingScreen} enterOptionsMenu={enterOptionsMenu} vocabulary={vocabulary} />;
+      case screen.load: return <LoadingScreen onClick={enterNewGame} vocabulary={vocabulary} />;
+      case screen.ingame: return <IngameUi backToMain={enterMainMenu} vocabulary={vocabulary} />;
+      case screen.option: return <OptionsMenu />;
       default: return null;
     }
   };
