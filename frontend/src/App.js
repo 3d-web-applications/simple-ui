@@ -20,34 +20,13 @@ import screen from './data/screen-index';
 
 const App = () => {
   const [pageIndex, setPageIndex] = useState(debug.entryPoint || screen.welcome);
-
-  const enterPrologue = () => {
-    setPageIndex(screen.intro);
-  };
-
-  const enterMainMenu = () => {
-    setPageIndex(screen.main);
-  };
-
-  const enterLoadingScreen = () => {
-    setPageIndex(screen.load);
-  };
-
-  const enterNewGame = () => {
-    setPageIndex(screen.ingame);
-  };
-
-  const enterOptionsMenu = () => {
-    setPageIndex(screen.option);
-  };
-
   const SelectMenu = (value) => {
     switch (value) {
-      case screen.welcome: return <WelcomeScreen onClick={enterPrologue} vocabulary={vocabulary} />;
-      case screen.intro: return <PlotScreen plot={plot} onClick={enterMainMenu} vocabulary={vocabulary} />;
-      case screen.main: return <MainMenuScreen startNewGame={enterLoadingScreen} enterOptionsMenu={enterOptionsMenu} vocabulary={vocabulary} />;
-      case screen.load: return <LoadingScreen onClick={enterNewGame} vocabulary={vocabulary} />;
-      case screen.ingame: return <IngameUi backToMain={enterMainMenu} vocabulary={vocabulary} />;
+      case screen.welcome: return <WelcomeScreen onClick={() => setPageIndex(screen.intro)} vocabulary={vocabulary} />;
+      case screen.intro: return <PlotScreen plot={plot} onClick={() => setPageIndex(screen.main)} vocabulary={vocabulary} />;
+      case screen.main: return <MainMenuScreen startNewGame={() => setPageIndex(screen.load)} enterOptionsMenu={() => setPageIndex(screen.option)} vocabulary={vocabulary} />;
+      case screen.load: return <LoadingScreen onClick={() => setPageIndex(screen.ingame)} vocabulary={vocabulary} />;
+      case screen.ingame: return <IngameUi backToMain={() => setPageIndex(screen.main)} vocabulary={vocabulary} />;
       case screen.option: return <OptionsMenu />;
       default: return null;
     }
