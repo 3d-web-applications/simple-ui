@@ -5,26 +5,27 @@ import PropTypes from 'prop-types';
 
 import { ButtonGroup } from '../components/button-group';
 import { closeApplication } from '../util/close-application';
+import { Load, Option } from '../data/screen-index';
 import * as url from '../images/background-image - Kopie4.png';
 
 const MainMenuScreen = ({
-  startNewGame, resumeLastGame, enterOptionsMenu, vocabulary,
+  setPageIndex, vocabulary,
 }) => {
   const buttons = [
     {
       label: vocabulary.main_btn_new,
       classes: 'main-menu-btn',
-      onClick: startNewGame,
+      onClick: () => setPageIndex(Load),
     },
     {
       label: vocabulary.main_btn_load,
       classes: `main-menu-btn ${(localStorage) ? '' : 'disabled'}`,
-      onClick: resumeLastGame,
+      onClick: () => {},
     },
     {
       label: vocabulary.main_btn_options,
       classes: 'main-menu-btn',
-      onClick: enterOptionsMenu,
+      onClick: () => setPageIndex(Option),
     },
     {
       label: vocabulary.main_btn_quit,
@@ -54,9 +55,7 @@ MainMenuScreen.defaultProps = {
 };
 
 MainMenuScreen.propTypes = {
-  startNewGame: PropTypes.func.isRequired,
-  resumeLastGame: PropTypes.func.isRequired,
-  enterOptionsMenu: PropTypes.func.isRequired,
+  setPageIndex: PropTypes.func.isRequired,
   vocabulary: PropTypes.object.isRequired,
 };
 

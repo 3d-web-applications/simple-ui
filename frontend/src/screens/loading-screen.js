@@ -1,9 +1,11 @@
+import './loading-screen.css';
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import Progress from 'react-progressbar';
 import Typing from 'react-typing-animation';
 
-import './loading-screen.css';
+import { Ingame } from '../data/screen-index';
 
 const data = [
   '- 52°31\'04.5"N 13°24\'20.1"E',
@@ -39,8 +41,8 @@ const createTypingField = customStyle => (
   </div>
 );
 
-const LoadingScreen = ({ onClick, vocabulary }) => (
-  <div className="LS" onClick={() => onClick()}>
+const LoadingScreen = ({ setPageIndex, vocabulary }) => (
+  <div className="LS" onClick={() => setPageIndex(Ingame)}>
     <div className="LS-typing-area">
       {createTypingField(style)}
     </div>
@@ -61,7 +63,7 @@ const LoadingScreen = ({ onClick, vocabulary }) => (
 );
 
 LoadingScreen.propTypes = {
-  onClick: PropTypes.func.isRequired,
+  setPageIndex: PropTypes.func.isRequired,
   vocabulary: PropTypes.object.isRequired,
 };
 

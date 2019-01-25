@@ -24,11 +24,11 @@ const App = () => {
   const [pageIndex, setPageIndex] = useState(debug.entryPoint || Welcome);
   const SelectMenu = (value) => {
     switch (value) {
-      case Welcome: return <WelcomeScreen onClick={() => setPageIndex(Intro)} vocabulary={vocabulary} />;
-      case Intro: return <PlotScreen plot={plot} onClick={() => setPageIndex(Main)} vocabulary={vocabulary} />;
-      case Main: return <MainMenuScreen startNewGame={() => setPageIndex(Load)} enterOptionsMenu={() => setPageIndex(Option)} vocabulary={vocabulary} />;
-      case Load: return <LoadingScreen onClick={() => setPageIndex(Ingame)} vocabulary={vocabulary} />;
-      case Ingame: return <IngameUi backToMain={() => setPageIndex(Main)} vocabulary={vocabulary} />;
+      case Welcome: return <WelcomeScreen setPageIndex={setPageIndex} vocabulary={vocabulary} />;
+      case Intro: return <PlotScreen plot={plot} setPageIndex={setPageIndex} vocabulary={vocabulary} />;
+      case Main: return <MainMenuScreen setPageIndex={setPageIndex} vocabulary={vocabulary} />;
+      case Load: return <LoadingScreen setPageIndex={setPageIndex} vocabulary={vocabulary} />;
+      case Ingame: return <IngameUi setPageIndex={setPageIndex} vocabulary={vocabulary} />;
       case Option: return <OptionsMenu />;
       default: return null;
     }

@@ -4,7 +4,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Typing from 'react-typing-animation';
 
-const PlotScreen = ({ plot, onClick, vocabulary }) => {
+import { Main } from '../data/screen-index';
+
+const PlotScreen = ({ plot, setPageIndex, vocabulary }) => {
   const array = [];
 
   plot.forEach((text) => {
@@ -16,8 +18,7 @@ const PlotScreen = ({ plot, onClick, vocabulary }) => {
 
   return <div
       className="plot-screen"
-      onClick={() => onClick()
-    }>
+      onClick={() => setPageIndex(Main)}>
       <p className="skip pulsate">{vocabulary.intro_skip}</p>
       <div className="plot">
         <Typing speed={30}>
@@ -29,7 +30,7 @@ const PlotScreen = ({ plot, onClick, vocabulary }) => {
 
 PlotScreen.propTypes = {
   plot: PropTypes.array.isRequired,
-  onClick: PropTypes.func.isRequired,
+  setPageIndex: PropTypes.func.isRequired,
   vocabulary: PropTypes.object.isRequired,
 };
 

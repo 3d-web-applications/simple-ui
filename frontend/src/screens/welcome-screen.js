@@ -3,11 +3,12 @@ import './welcome-screen.css';
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { Intro } from '../data/screen-index';
 import * as url from '../images/background-image - Kopie4.png';
 
-const WelcomeScreen = ({ onClick, vocabulary }) => (
+const WelcomeScreen = ({ setPageIndex, vocabulary }) => (
   <div className="welcome-screen">
-    <div className="row-100" onClick={() => onClick()}>
+    <div className="row-100" onClick={() => setPageIndex(Intro)}>
       <div className="column">
         <div className="title">
           <h1>{vocabulary.welcome_title}</h1>
@@ -26,7 +27,7 @@ const WelcomeScreen = ({ onClick, vocabulary }) => (
 );
 
 WelcomeScreen.propTypes = {
-  onClick: PropTypes.func.isRequired,
+  setPageIndex: PropTypes.func.isRequired,
   vocabulary: PropTypes.object.isRequired,
 };
 

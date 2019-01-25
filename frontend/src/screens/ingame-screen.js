@@ -10,8 +10,9 @@ import { RadioButtonBlank } from '../components-svg/radio-button-blank-icon';
 import { MinusIcon } from '../components-svg/minus-icon';
 import { AbilityContainer } from '../components/ability-container';
 import { OverlayScreen } from './overlay-screen';
+import { Main } from '../data/screen-index';
 
-export const IngameUi = ({ backToMain, vocabulary }) => {
+export const IngameUi = ({ setPageIndex, vocabulary }) => {
   const [options, setOptions] = useState(false);
   const progress = 50;
 
@@ -49,13 +50,13 @@ export const IngameUi = ({ backToMain, vocabulary }) => {
 
       {options && <OverlayScreen
         closeOverlay={() => setOptions(false)}
-        backToMain={backToMain}
+        backToMain={() => setPageIndex(Main)}
         vocabulary={vocabulary}
       />}
   </div>);
 };
 
 IngameUi.propTypes = {
-  backToMain: PropTypes.func.isRequired,
+  setPageIndex: PropTypes.func.isRequired,
   vocabulary: PropTypes.object.isRequired,
 };
